@@ -46,7 +46,7 @@ app.use("/api/equipment-categories", require('./routes/equipment-categories'));
 
 
 // Connect to database and start the server
-mongoose.connect(process.env.MONGOLAB_URI, (err, database) => {
+mongoose.connect('mongodb://localhost:27017/dnd5eapi', (err, database) => {
   if (err) {
     console.log(err);
     process.exit(1);
